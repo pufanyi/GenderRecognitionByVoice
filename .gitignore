@@ -130,3 +130,6 @@ dmypy.json
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+
+# DataSpell
+.idea/

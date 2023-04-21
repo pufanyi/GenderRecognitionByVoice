@@ -6,6 +6,12 @@ Our goal is to study the relationship between sound data and the gender of the s
 
 The main page of our website is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
 
+## Problem Definition
+
+- How can we differentiate the gender of a speaker through their voice?
+  - What are the key features to achieve this?
+  - Which models can better predict the gender of a speaker?
+
 ## Group Members
 
 | Name | GitHub Account | Email | Contribution |

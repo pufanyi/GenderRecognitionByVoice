@@ -14,9 +14,9 @@ Please read through the code in the flowing sequence:
 
 - [`DataPreparationAndExploration.ipynb`](./src/DataPreparationAndExploration.ipynb)
 - [`GenderRecognitionUsingTreeBasedAlgorithms.ipynb`](./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb)
-- [GenderRecognitionUsingNumericalAlgorithms.ipynb](./src/GenderRecognitionUsingNumericalAlgorithms.ipynb)
-- [SVMFurtherExploration.ipynb](./src/SVMFurtherExploration.ipynb)
-- [PCAFurtherExploration.ipynb](./src/PCAFurtherExploration.ipynb)
+- [`GenderRecognitionUsingNumericalAlgorithms.ipynb`](./src/GenderRecognitionUsingNumericalAlgorithms.ipynb)
+- [`SVMFurtherExploration.ipynb`](./src/SVMFurtherExploration.ipynb)
+- [`PCAFurtherExploration.ipynb`](./src/PCAFurtherExploration.ipynb)
 
 ## Problem Definition
 

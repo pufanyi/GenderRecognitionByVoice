@@ -1,6 +1,6 @@
 # Gender Recognition by Voice
 
-This is the project for NTU course *SC1015 Data Science and Artificial Intelligence*.
+This is the project for NTU course *SC1015 Introduction to Data Science and Artificial Intelligence*.
 
 ## Group Members
 

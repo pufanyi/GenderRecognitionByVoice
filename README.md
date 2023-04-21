@@ -36,8 +36,6 @@ To prepare the input data, we applied a log transformation using the formula $x'
 
 ![](./images/DataPreparation/LogTransform.png)
 
-
-
 ## Models Used
 
 | Model | Training Accuracy | Testing Accuracy |
@@ -46,6 +44,18 @@ To prepare the input data, we applied a log transformation using the formula $x'
 | Random Forest | 1.0000 | 0.9801 |
 | Logistic Regression | 0.9763 | 0.9734 |
 | K-Nearest Neighbors | 1.0000 | 0.9817 |
+
+## Further Exploration
+
+### Cross Validation
+
+Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we will utilize CV to evaluate the model's generalization performance and reduce overfitting.
+
+### Support Vector Machines
+
+We still chose two previous variables. We used four types of models.The Gaussian kernel has the highest accuracy score of 0.968, followed by the Linear kernel with the accuracy score of 0.966. The other two, Polynomial kernel and Sigmoid kernel have the accuracy of 0.946 and 0.865.
+
+![](./images/SVMFurtherExplore/2DMixed.png)
 
 ## Group Members
 

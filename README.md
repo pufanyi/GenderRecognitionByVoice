@@ -4,13 +4,21 @@ This is the project for NTU course *SC1015 Introduction to Data Science and Arti
 
 Our goal is to study the relationship between sound data and the gender of the speaker, and to attempt to estimate the gender of the speaker through various models.
 
-The main page of our website is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
+The main page of our project is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
 
 ## Problem Definition
 
 - How can we differentiate the gender of a speaker through their voice?
   - What are the key features to achieve this?
   - Which models can better predict the gender of a speaker?
+
+## Models Used
+
+| Model | Training Accuracy | Testing Accuracy |
+| --- | --- | --- |
+| Classification Tree | 1.0000 | 0.9751 |
+| Random Forest | 1.0000 | 0.9801 |
+| Logistic Regression | 0.9763 | 0.9734 |
 
 ## Group Members
 

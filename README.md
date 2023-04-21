@@ -12,10 +12,11 @@ All code is located under the src directory.
 
 Please read through the code in the flowing sequence:
 
-- [`GenderRecognitionUsingTreeBasedAlgorithms.ipynb`]
-(./src/DataPreparationAndExploration.ipynb)
-
+- [`DataPreparationAndExploration.ipynb`](./src/DataPreparationAndExploration.ipynb)
 - [`GenderRecognitionUsingTreeBasedAlgorithms.ipynb`](./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb)
+- [GenderRecognitionUsingNumericalAlgorithms.ipynb](./src/GenderRecognitionUsingNumericalAlgorithms.ipynb)
+- [SVMFurtherExploration.ipynb](./src/SVMFurtherExploration.ipynb)
+- [PCAFurtherExploration.ipynb](./src/PCAFurtherExploration.ipynb)
 
 ## Problem Definition
 

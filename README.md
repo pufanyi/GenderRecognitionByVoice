@@ -44,6 +44,7 @@ To prepare the input data, we applied a log transformation using the formula $x'
 | Random Forest | 1.0000 | 0.9801 |
 | Logistic Regression | 0.9763 | 0.9734 |
 | K-Nearest Neighbors | 1.0000 | 0.9817 |
+| Support Vector Machine | 0.9896 | 0.9834 |
 
 ## Further Exploration
 

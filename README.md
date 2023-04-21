@@ -36,6 +36,16 @@ To prepare the input data, we applied a log transformation using the formula $x'
 
 ![](./images/DataPreparation/LogTransform.png)
 
+### Data Normalization
+
+The purpose of normalization is to ensure that all features are treated equally in terms of their scale.
+
+Before normalization, the accuracy of SVM was approximately 60%. Even after changing various parameters, carrying out plenty of trials, the accuracy did not have a prominent improvement. After the normalization, the accuracy can be enhanced to nearly 99%.
+
+### Outlier Removal
+
+When dealing with datasets with a large number of predictors, it can be challenging to perform outlier removal on each specific predictor. Therefore, we utilized the Isolation Forest algorithm to identify and remove outliers from the input data.
+
 ## Models Used
 
 | Model | Training Accuracy | Testing Accuracy |

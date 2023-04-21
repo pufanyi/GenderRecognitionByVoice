@@ -24,6 +24,20 @@ Please read through the code in the flowing sequence:
   - What are the key features to achieve this?
   - Which models can better predict the gender of a speaker?
 
+## Highlight of Data preparation
+
+### Remove Duplicate Data
+
+We removed the `meanfreq` (mean frequency) and `centroid` (frequency centroid). They are the same in definition.
+
+### Log Transformation
+
+To prepare the input data, we applied a log transformation using the formula $x' = \ln(x+1)$, which helped to reduce the impact of extreme values and normalize the distribution of the data. This transformation reduced skewness, brought the data closer to normal distribution, and improved the accuracy of our model by reducing the influence of extreme values.
+
+![](./images/DataPreparation/LogTransform.png)
+
+
+
 ## Models Used
 
 | Model | Training Accuracy | Testing Accuracy |

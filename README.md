@@ -24,7 +24,7 @@ Please read through the code in the flowing sequence:
   - What are the key features to achieve this?
   - Which models can better predict the gender of a speaker?
 
-## Highlight of Data preparation
+## Highlights of Data preparation
 
 ### Remove Duplicate Data
 
@@ -46,7 +46,7 @@ To prepare the input data, we applied a log transformation using the formula $x'
 | K-Nearest Neighbors | 1.0000 | 0.9817 |
 | Support Vector Machine | 0.9896 | 0.9834 |
 
-## Further Exploration
+## Highlights of Machine Learning
 
 ### Cross Validation
 

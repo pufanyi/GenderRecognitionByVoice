@@ -57,6 +57,36 @@ We still chose two previous variables. We used four types of models.The Gaussian
 
 ![](./images/SVMFurtherExplore/2DMixed.png)
 
+### Principal Component Analysis
+
+PCA is a type of unsupervised learning algorithm that reduces the number of features while still retaining most of the original variance in the data.
+
+According to our data, the initial accuracy is approximately 0.98. When the features are reduced below 8, the accuracy rapidly declines to 0.88.
+
+### Prediction Modelling
+
+After utilizing various models, we started to consider whether we could improve our results by integrating the outputs of multiple high-performing models and selecting the majority vote. However, we eventually discovered that the accuracy of this algorithm was not as ideal as we had hoped, and did not even outperform the highest individual accuracy achieved. In other words, blindly combining all models does not necessarily lead to better results.
+
+## Conclusion
+
+What are the key features to achieve this?
+
+> According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices.
+
+Which models can better predict the gender of a speaker?
+
+> Among the various models, we found that the SVM model with an RBF kernel achieved the highest accuracy, with a score of 0.9834.
+
+## What We Learnt
+
+- Importance of data preparation
+  - The initial lack of normalization has resulted in poor performance of the SVM model. Despite spending significant time adjusting the SVM parameters, the model still showed poor accuracy. However, after performing normalization, we observed a significant improvement in the accuracy of our SVM model.
+- The concepts and implementations of multiple models
+  - Supervised learning: SVM, KNN, Random Forest, Logistic Regression
+  - Unsupervised learning: PCA
+  - Using cross-validation to get the accuracy
+- The prediction model created by ourselves
+
 ## Group Members
 
 | Name | GitHub Account | Email | Contribution |

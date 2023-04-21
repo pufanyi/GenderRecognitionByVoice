@@ -6,6 +6,16 @@ Our goal is to study the relationship between sound data and the gender of the s
 
 The main page of our project is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
 
+## Content
+
+All code is located under the src directory.
+
+Please read through the code in the flowing sequence:
+
+- [`GenderRecognitionUsingTreeBasedAlgorithms.ipynb`]
+(./src/DataPreparationAndExploration.ipynb)
+- [`GenderRecognitionUsingTreeBasedAlgorithms.ipynb`](./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb)
+
 ## Problem Definition
 
 - How can we differentiate the gender of a speaker through their voice?

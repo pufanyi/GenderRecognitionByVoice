@@ -4,6 +4,8 @@ This is the project for NTU course *SC1015 Introduction to Data Science and Arti
 
 Our goal is to study the relationship between sound data and the gender of the speaker, and to attempt to estimate the gender of the speaker through various models.
 
+The main page of our website is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
+
 ## Group Members
 
 | Name | GitHub Account | Email | Contribution |

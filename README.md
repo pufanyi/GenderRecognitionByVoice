@@ -19,6 +19,7 @@ The main page of our project is [here](https://pufanyi.github.io/GenderRecogniti
 | Classification Tree | 1.0000 | 0.9751 |
 | Random Forest | 1.0000 | 0.9801 |
 | Logistic Regression | 0.9763 | 0.9734 |
+| K-Nearest Neighbors | 1.0000 | 0.9817 |
 
 ## Group Members
 

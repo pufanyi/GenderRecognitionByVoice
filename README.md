@@ -130,14 +130,13 @@ Various resources were used to help us gain a better understanding of the projec
    1. Helped us gain a basic understanding of various supervised learning methods.
    2. Helped us understand Cross Validation.
 4. [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
-   1. Help us dive deeper into the theory behind support vector machines.
-5. [Studying materials from Nanyang Technological University](https://ntulearn.ntu.edu.sg/)
+   1. Helped us dive deeper into the theory behind support vector machines.
+5. [Learning Materials from Nanyang Technological University](https://ntulearn.ntu.edu.sg/)
    1. Helped us gain a basic understanding of machine learning.
    2. Lab classes guided us to start using Jupyter Notebook.
 6. [UC Berkeley Data 100: Principles and Techniques of Data Science](https://ds100.org/)
    1. Enabled us to make further progress in Python programming.
    2. Helped us gain a basic understanding of some machine learning algorithms.
-
-
-
-
+7. [ChatGPT](https://chat.openai.com/)
+   1. Can patiently explain to me when I don't understand a specific topic.
+   2. Help me debug my code when it's not working properly.

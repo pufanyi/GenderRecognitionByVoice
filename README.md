@@ -94,7 +94,8 @@ Which models can better predict the gender of a speaker?
   - Supervised learning: SVM, KNN, Random Forest, Logistic Regression
   - Unsupervised learning: PCA
   - Using cross-validation to get the accuracy
-- The prediction model created by ourselves
+- Ensemble Vote model
+  - We developed an Ensemble Vote model which integrated the outputs of multiple high-performing models and selected the majority vote to improve our prediction results. In our case, the accuracy of the Ensemble Vote model was not as ideal as we had hoped. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the importance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model's prediction.
 
 ## Group Members
 

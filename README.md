@@ -55,6 +55,8 @@ When dealing with datasets with a large number of predictors, it can be challeng
 | Logistic Regression | 0.9763 | 0.9734 |
 | K-Nearest Neighbors | 1.0000 | 0.9817 |
 | Support Vector Machine | 0.9896 | 0.9834 |
+| Multi-Layer Perceptron | 1.0000 | 0.9734 |
+| Ensemble Vote | 1.0000 | 0.9800 |
 
 ## Highlights of Machine Learning
 

@@ -88,7 +88,7 @@ def predict(self, X):
 
 What are the key features to classify the gender of a speaker through their voice?
 
-> According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices. A higher IQR and lower meanfun are more indicative of a male speaker.
+> According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices. A higher `IQR` and lower `meanfun` are more indicative of a male speaker.
 
 Which models can predict the gender of a speaker with higher accuracy?
 

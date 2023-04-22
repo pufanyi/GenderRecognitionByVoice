@@ -82,15 +82,7 @@ def predict(self, X):
   mlp_predictions = self.mlpClassifier.predict(X)
   predictions = []
   for i in range(len(X)):
-    predictions.append(
-      np.argmax(
-        np.bincount([
-          rf_predictions[i],
-          svm_predictions[i],
-          mlp_predictions[i]
-        ])
-      )
-    )
+    predictions.append(np.argmax(np.bincount([rf_predictions[i], svm_predictions[i], mlp_predictions[i]])))
   return predictions
 ```
 

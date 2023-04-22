@@ -1,0 +1,199 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<p><a href="https://pufanyi.github.io/GenderRecognitionByVoice/"><img
+src="./images/Cover/cover.svg" /></a></p>
+<div class="card">
+<p>This is the project for NTU course <em>SC1015 Introduction to Data
+Science and Artificial Intelligence</em>.</p>
+<p>Our goal is to study the relationship between sound data and the
+gender of the speaker, and to attempt to estimate the gender of the
+speaker through various models.</p>
+<p>The main page of our project is <a
+href="https://pufanyi.github.io/GenderRecognitionByVoice">here</a>.</p>
+<h2 id="content">Content</h2>
+<p>All code is located under the src directory.</p>
+<p>Please read through the code in the flowing sequence:</p>
+<ul>
+<li><a
+href="./src/DataPreparationAndExploration.ipynb"><code>DataPreparationAndExploration.ipynb</code></a></li>
+<li><a
+href="./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb"><code>GenderRecognitionUsingTreeBasedAlgorithms.ipynb</code></a></li>
+<li><a
+href="./src/GenderRecognitionUsingNumericalAlgorithms.ipynb"><code>GenderRecognitionUsingNumericalAlgorithms.ipynb</code></a></li>
+<li><a
+href="./src/SVMFurtherExploration.ipynb"><code>SVMFurtherExploration.ipynb</code></a></li>
+<li><a
+href="./src/PCAFurtherExploration.ipynb"><code>PCAFurtherExploration.ipynb</code></a></li>
+</ul>
+<h2 id="problem-definition">Problem Definition</h2>
+<ul>
+<li>How can we differentiate the gender of a speaker through their
+voice?
+<ul>
+<li>What are the key features to achieve this?</li>
+<li>Which models can better predict the gender of a speaker?</li>
+</ul></li>
+</ul>
+<h2 id="highlights-of-data-preparation">Highlights of Data
+preparation</h2>
+<h3 id="remove-duplicate-data">Remove Duplicate Data</h3>
+<p>We removed the <code>meanfreq</code> (mean frequency) and
+<code>centroid</code> (frequency centroid). They are the same in
+definition.</p>
+<h3 id="log-transformation">Log Transformation</h3>
+<p>To prepare the input data, we applied a log transformation, which
+helped to reduce the impact of extreme values and normalize the
+distribution of the data. This transformation reduced skewness, brought
+the data closer to normal distribution, and improved the accuracy of our
+model by reducing the influence of extreme values.</p>
+<p><img src="./images/DataPreparation/LogTransform.png" /></p>
+<h3 id="data-normalization">Data Normalization</h3>
+<p>The purpose of normalization is to ensure that all features are
+treated equally in terms of their scale.</p>
+<p>Before normalization, the accuracy of SVM was approximately 60%. Even
+after changing various parameters, carrying out plenty of trials, the
+accuracy did not have a prominent improvement. After the normalization,
+the accuracy can be enhanced to nearly 99%.</p>
+<h3 id="outlier-removal">Outlier Removal</h3>
+<p>When dealing with datasets with a large number of predictors, it can
+be challenging to perform outlier removal on each specific predictor.
+Therefore, we utilized the Isolation Forest algorithm to identify and
+remove outliers from the input data.</p>
+<h2 id="models-used">Models Used</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Training Accuracy</th>
+<th>Testing Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classification Tree</td>
+<td>1.0000</td>
+<td>0.9751</td>
+</tr>
+<tr class="even">
+<td>Random Forest</td>
+<td>1.0000</td>
+<td>0.9801</td>
+</tr>
+<tr class="odd">
+<td>Logistic Regression</td>
+<td>0.9763</td>
+<td>0.9734</td>
+</tr>
+<tr class="even">
+<td>K-Nearest Neighbors</td>
+<td>1.0000</td>
+<td>0.9817</td>
+</tr>
+<tr class="odd">
+<td>Support Vector Machine</td>
+<td>0.9896</td>
+<td>0.9834</td>
+</tr>
+</tbody>
+</table>
+<h2 id="highlights-of-machine-learning">Highlights of Machine
+Learning</h2>
+<h3 id="cross-validation">Cross Validation</h3>
+<p>Previously, we employed a conventional train-test split to evaluate
+the performance of our gender classification model. In order to further
+improve the accuracy and efficiency of our algorithm, we will utilize CV
+to evaluate the model’s generalization performance and reduce
+overfitting.</p>
+<h3 id="support-vector-machines-exploration">Support Vector Machines
+Exploration</h3>
+<p>We conducted an in-depth analysis of SVM by exploring and adjusting
+its parameters to achieve optimal performance. To explicitly refine our
+understanding of each parameter, we plotted the separating hyperplane
+for each kernel. This process allowed us to fine-tune the SVM algorithm
+and gain a better understanding of its behavior.</p>
+<h3 id="principal-component-analysis">Principal Component Analysis</h3>
+<p>PCA is a type of unsupervised learning algorithm that reduces the
+number of features while still retaining most of the original variance
+in the data.</p>
+<p>According to our data, the initial accuracy is approximately 0.98.
+When the features are reduced below 8, the accuracy rapidly declines to
+0.88.</p>
+<h3 id="prediction-modelling">Prediction Modelling</h3>
+<p>After utilizing various models, we started to consider whether we
+could improve our results by integrating the outputs of multiple
+high-performing models and selecting the majority vote. However, we
+eventually discovered that the accuracy of this algorithm was not as
+ideal as we had hoped, and did not even outperform the highest
+individual accuracy achieved. In other words, blindly combining all
+models does not necessarily lead to better results.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>What are the key features to achieve this?</p>
+<blockquote>
+<p>According to classification tree analysis, <code>IQR</code> and
+<code>meanfun</code> have been identified as the two main predictors for
+differentiating male and female voices.</p>
+</blockquote>
+<p>Which models can better predict the gender of a speaker?</p>
+<blockquote>
+<p>Among the various models, we found that the SVM model with an RBF
+kernel achieved the highest accuracy, with a score of 0.9834.</p>
+</blockquote>
+<h2 id="what-we-learnt">What We Learnt</h2>
+<ul>
+<li>Importance of data preparation
+<ul>
+<li>The initial lack of normalization has resulted in poor performance
+of the SVM model. Despite spending significant time adjusting the SVM
+parameters, the model still showed poor accuracy. However, after
+performing normalization, we observed a significant improvement in the
+accuracy of our SVM model.</li>
+</ul></li>
+<li>The concepts and implementations of multiple models
+<ul>
+<li>Supervised learning: SVM, KNN, Random Forest, Logistic
+Regression</li>
+<li>Unsupervised learning: PCA</li>
+<li>Using cross-validation to get the accuracy</li>
+</ul></li>
+<li>The prediction model created by ourselves</li>
+</ul>
+<h2 id="group-members">Group Members</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>GitHub Account</th>
+<th>Email</th>
+<th>Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pu Fanyi</td>
+<td><a href="https://github.com/pufanyi">pufanyi</a></td>
+<td>FPU001@e.ntu.edu.sg</td>
+<td>???</td>
+</tr>
+<tr class="even">
+<td>Jiang Jinyi</td>
+<td><a href="https://github.com/Jinyi087">Jinyi087</a></td>
+<td>D220006@e.ntu.edu.sg</td>
+<td>???</td>
+</tr>
+<tr class="odd">
+<td>Shan Yi</td>
+<td><a href="https://github.com/shanyi26">shanyi26</a></td>
+<td>SH005YI@e.ntu.edu.sg</td>
+<td>???</td>
+</tr>
+</tbody>
+</table>
+</div>

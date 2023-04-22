@@ -58,6 +58,8 @@ When dealing with datasets with a large number of predictors, it can be challeng
 | Multi-Layer Perceptron | 1.0000 | 0.9734 |
 | Ensemble Vote | 1.0000 | 0.9800 |
 
+![](./images/MachineLearning/accuracy.png)
+
 ## Highlights of Machine Learning
 
 ### Cross Validation (CV)

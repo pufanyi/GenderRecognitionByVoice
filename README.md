@@ -140,3 +140,7 @@ Various resources were used to help us gain a better understanding of the projec
 7. [ChatGPT](https://chat.openai.com/)
    1. Can patiently explain to me when I don't understand a specific topic.
    2. Help me debug my code when it's not working properly.
+8. [scikit-learn documentation](https://scikit-learn.org/stable/)
+   1. Helped us understand the usage of various machine learning models.
+9. [pandas documentation](https://pandas.pydata.org/pandas-docs/stable/)
+   1. Helped us understand the usage of various `pandas` functions.

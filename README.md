@@ -38,9 +38,7 @@ To prepare the input data, we applied a log transformation, which helped to redu
 
 ### Data Normalization
 
-The purpose of normalization is to ensure that all features are treated equally in terms of their scale.
-
-Before normalization, the accuracy of SVM was approximately 60%. Even after changing various parameters, carrying out plenty of trials, the accuracy did not have a prominent improvement. After the normalization, the accuracy can be enhanced to nearly 99%.
+The purpose of normalization is to ensure that all features are treated equally in terms of their scale. After applying normalization, we saw a remarkable increase in accuracy of our SVM model from approximately 60% to nearly 99%.
 
 ### Outlier Removal
 
@@ -72,15 +70,15 @@ PCA is a type of unsupervised learning algorithm that reduces the number of feat
 
 According to our data, the initial accuracy is approximately 0.98. When the features are reduced below 8, the accuracy rapidly declines to 0.88.
 
-### Prediction Modelling
+### Ensemble Vote model
 
-After utilizing various models, we started to consider whether we could improve our results by integrating the outputs of multiple high-performing models and selecting the majority vote. However, we eventually discovered that the accuracy of this algorithm was not as ideal as we had hoped, and did not even outperform the highest individual accuracy achieved. In other words, blindly combining all models does not necessarily lead to better results.
+We developed an Ensemble Vote model which integrated the outputs of multiple high-performing models and selected the majority vote to improve our prediction results. In our case, the accuracy of the Ensemble Vote model was not as ideal as we had hoped. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the importance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model's prediction.
 
 ## Conclusion
 
 What are the key features to achieve this?
 
-> According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices.
+> According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices. A higher IQR and lower meanfun are more indicative of a male speaker.
 
 Which models can better predict the gender of a speaker?
 
@@ -95,7 +93,6 @@ Which models can better predict the gender of a speaker?
   - Unsupervised learning: PCA
   - Using cross-validation to get the accuracy
 - Ensemble Vote model
-  - We developed an Ensemble Vote model which integrated the outputs of multiple high-performing models and selected the majority vote to improve our prediction results. In our case, the accuracy of the Ensemble Vote model was not as ideal as we had hoped. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the importance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model's prediction.
 
 ## Group Members
 

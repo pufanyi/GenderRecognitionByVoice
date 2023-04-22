@@ -32,7 +32,7 @@ We removed the `meanfreq` (mean frequency) and `centroid` (frequency centroid). 
 
 ### Log Transformation
 
-To prepare the input data, we applied a log transformation using the formula <img src="svgs/4b1dc585cc9fd6f41be2926287c1060f.svg?invert_in_darkmode" align=middle width=100.11398759999997pt height=24.7161288pt/>, which helped to reduce the impact of extreme values and normalize the distribution of the data. This transformation reduced skewness, brought the data closer to normal distribution, and improved the accuracy of our model by reducing the influence of extreme values.
+To prepare the input data, we applied a log transformation, which helped to reduce the impact of extreme values and normalize the distribution of the data. This transformation reduced skewness, brought the data closer to normal distribution, and improved the accuracy of our model by reducing the influence of extreme values.
 
 ![](./images/DataPreparation/LogTransform.png)
 

@@ -117,3 +117,7 @@ Which models can predict the gender of a speaker with higher accuracy?
 | Pu Fanyi | [pufanyi](https://github.com/pufanyi) | FPU001@e.ntu.edu.sg | ??? |
 | Jiang Jinyi | [Jinyi087](https://github.com/Jinyi087) | D220006@e.ntu.edu.sg | ??? |
 | Shan Yi | [shanyi26](https://github.com/shanyi26) | SH005YI@e.ntu.edu.sg | ??? |
+
+## Reference
+
+1. [DataSet from Kaggle](https://www.kaggle.com/datasets/primaryobjects/voicegender)

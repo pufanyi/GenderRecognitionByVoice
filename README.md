@@ -18,7 +18,7 @@ Please read through the code in the flowing sequence:
 - [`SVMFurtherExploration.ipynb`](./src/SVMFurtherExploration.ipynb)
 - [`PCAFurtherExploration.ipynb`](./src/PCAFurtherExploration.ipynb)
 
-## Problem Definition
+## Problem Formulation
 
 How can we classify the gender of a speaker through their voice?
 - What are the key features to achieve this?

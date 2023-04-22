@@ -27,35 +27,37 @@ href="./src/SVMFurtherExploration.ipynb"><code>SVMFurtherExploration.ipynb</code
 <li><a
 href="./src/PCAFurtherExploration.ipynb"><code>PCAFurtherExploration.ipynb</code></a></li>
 </ul>
-<h2 id="problem-definition">Problem Definition</h2>
-<ul>
-<li>How can we differentiate the gender of a speaker through their
-voice?
-<ul>
-<li>What are the key features to achieve this?</li>
-<li>Which models can better predict the gender of a speaker?</li>
-</ul></li>
-</ul>
+<h2 id="problem-formulation">Problem Formulation</h2>
+<p>How can we classify the gender of a speaker through their voice? -
+What are the key features to achieve this? - Which models can better
+predict the gender of a speaker?</p>
 <h2 id="highlights-of-data-preparation">Highlights of Data
 preparation</h2>
 <h3 id="remove-duplicate-data">Remove Duplicate Data</h3>
-<p>We removed the <code>meanfreq</code> (mean frequency) and
-<code>centroid</code> (frequency centroid). They are the same in
-definition.</p>
-<h3 id="log-transformation">Log Transformation</h3>
-<p>To prepare the input data, we applied a log transformation, which
-helped to reduce the impact of extreme values and normalize the
-distribution of the data. This transformation reduced skewness, brought
-the data closer to normal distribution, and improved the accuracy of our
-model by reducing the influence of extreme values.</p>
-<p><img src="./images/DataPreparation/LogTransform.png" /></p>
+<p>The features <code>meanfreq</code> (mean frequency) and
+<code>centroid</code> (frequency centroid) were found to be identical in
+definition, so we removed the duplicate data to avoid redundancy and
+potential confusion in the analysis.</p>
+<h3 id="data-correction">Data Correction</h3>
+<p>To prepare the input data, we performed data correction by applying a
+log transformation. This helped to mitigate the impact of extreme values
+and normalize the distribution of the data. The log transformation
+effectively reduced skewness, brought the data closer to a normal
+distribution, and improved the accuracy of our model by mitigating the
+influence of outliers. Overall, this data correction technique proved to
+be an effective way to preprocess the input data and enhance the
+performance of our model.</p>
+<h4 id="data-before-log-transformation">Data Before Log
+Transformation</h4>
+<p><img src="./images/DataPreparation/LogTransform2.png" /></p>
+<h4 id="data-after-log-transformation">Data After Log
+Transformation</h4>
+<p><img src="./images/DataPreparation/LogTransform3.png" /></p>
 <h3 id="data-normalization">Data Normalization</h3>
 <p>The purpose of normalization is to ensure that all features are
-treated equally in terms of their scale.</p>
-<p>Before normalization, the accuracy of SVM was approximately 60%. Even
-after changing various parameters, carrying out plenty of trials, the
-accuracy did not have a prominent improvement. After the normalization,
-the accuracy can be enhanced to nearly 99%.</p>
+treated equally in terms of their scale. After applying normalization,
+we saw a remarkable increase in accuracy of our SVM model from 0.6934 to
+0.9834.</p>
 <h3 id="outlier-removal">Outlier Removal</h3>
 <p>When dealing with datasets with a large number of predictors, it can
 be challenging to perform outlier removal on each specific predictor.
@@ -96,49 +98,78 @@ remove outliers from the input data.</p>
 <td>0.9896</td>
 <td>0.9834</td>
 </tr>
+<tr class="even">
+<td>Multi-Layer Perceptron</td>
+<td>1.0000</td>
+<td>0.9734</td>
+</tr>
+<tr class="odd">
+<td>Ensemble Vote</td>
+<td>1.0000</td>
+<td>0.9800</td>
+</tr>
 </tbody>
 </table>
+<p><img src="./images/MachineLearning/accuracy.png" /></p>
 <h2 id="highlights-of-machine-learning">Highlights of Machine
 Learning</h2>
-<h3 id="cross-validation">Cross Validation</h3>
+<h3 id="cross-validation-cv">Cross Validation (CV)</h3>
 <p>Previously, we employed a conventional train-test split to evaluate
 the performance of our gender classification model. In order to further
-improve the accuracy and efficiency of our algorithm, we will utilize CV
-to evaluate the model’s generalization performance and reduce
+improve the accuracy and efficiency of our algorithm, we utilized CV to
+evaluate the model’s generalization performance and reduce
 overfitting.</p>
-<h3 id="support-vector-machines-exploration">Support Vector Machines
-Exploration</h3>
+<h3 id="support-vector-machines-svm-exploration">Support Vector Machines
+(SVM) Exploration</h3>
 <p>We conducted an in-depth analysis of SVM by exploring and adjusting
 its parameters to achieve optimal performance. To explicitly refine our
 understanding of each parameter, we plotted the separating hyperplane
-for each kernel. This process allowed us to fine-tune the SVM algorithm
-and gain a better understanding of its behavior.</p>
-<h3 id="principal-component-analysis">Principal Component Analysis</h3>
-<p>PCA is a type of unsupervised learning algorithm that reduces the
-number of features while still retaining most of the original variance
-in the data.</p>
-<p>According to our data, the initial accuracy is approximately 0.98.
-When the features are reduced below 8, the accuracy rapidly declines to
-0.88.</p>
-<h3 id="prediction-modelling">Prediction Modelling</h3>
-<p>After utilizing various models, we started to consider whether we
-could improve our results by integrating the outputs of multiple
-high-performing models and selecting the majority vote. However, we
-eventually discovered that the accuracy of this algorithm was not as
-ideal as we had hoped, and did not even outperform the highest
-individual accuracy achieved. In other words, blindly combining all
-models does not necessarily lead to better results.</p>
+for different parameter and kernel. This process allowed us to fine-tune
+the SVM algorithm and gain a better understanding of its behavior.</p>
+<h3 id="principal-component-analysis-pca">Principal Component Analysis
+(PCA)</h3>
+<p>We aimed to improve efficiency by compressing the predictor data
+using PCA. Through our exploration of compressing the data to varying
+dimensions and assessing the resulting accuracy, we gained a deeper
+understanding of the application of PCA. Our findings demonstrate that
+by compressing the data to a certain degree, we can achieve a good
+balance between accuracy and efficiency, leading to better performance
+in our predictive modeling.</p>
+<h3 id="ensemble-vote-model">Ensemble Vote Model</h3>
+<p>We developed an Ensemble Vote model that integrated the outputs of
+multiple high-performing models, including Multi-Layer Perceptron (MLP),
+Random Forest (RF), and Support Vector Machine (SVM), and selected the
+majority vote to improve our prediction results. However, the accuracy
+of the Ensemble Vote model did not meet our expectations. This
+experience taught us the importance of carefully selecting and combining
+models based on their individual strengths and weaknesses, and
+considering the underlying assumptions and limitations of each model. We
+also learned the significance of interpreting the results and
+understanding the reasoning behind the outputs, rather than blindly
+relying on a model’s prediction.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict(<span class="va">self</span>, X):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    rf_predictions <span class="op">=</span> <span class="va">self</span>.rfClassifier.predict(X)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    svm_predictions <span class="op">=</span> <span class="va">self</span>.svmClassifier.predict(X)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    mlp_predictions <span class="op">=</span> <span class="va">self</span>.mlpClassifier.predict(X)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    predictions <span class="op">=</span> []</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        predictions.append(np.argmax(np.bincount([rf_predictions[i], svm_predictions[i], mlp_predictions[i]])))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> predictions</span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
-<p>What are the key features to achieve this?</p>
+<p>What are the key features to classify the gender of a speaker through
+their voice?</p>
 <blockquote>
 <p>According to classification tree analysis, <code>IQR</code> and
 <code>meanfun</code> have been identified as the two main predictors for
-differentiating male and female voices.</p>
+differentiating male and female voices. A higher <code>IQR</code> and
+lower <code>meanfun</code> are more indicative of a male speaker.</p>
 </blockquote>
-<p>Which models can better predict the gender of a speaker?</p>
+<p>Which models can predict the gender of a speaker with higher
+accuracy?</p>
 <blockquote>
-<p>Among the various models, we found that the SVM model with an RBF
-kernel achieved the highest accuracy, with a score of 0.9834.</p>
+<p>Among the various models, the SVM model with an RBF kernel achieved
+the highest accuracy, with a score of 0.9834.</p>
 </blockquote>
 <h2 id="what-we-learnt">What We Learnt</h2>
 <ul>
@@ -150,14 +181,14 @@ parameters, the model still showed poor accuracy. However, after
 performing normalization, we observed a significant improvement in the
 accuracy of our SVM model.</li>
 </ul></li>
-<li>The concepts and implementations of multiple models
+<li>Exploring Various Machine Learning Models for Accurate Predictions
 <ul>
-<li>Supervised learning: SVM, KNN, Random Forest, Logistic
-Regression</li>
-<li>Unsupervised learning: PCA</li>
-<li>Using cross-validation to get the accuracy</li>
+<li>Supervised learning: Classification Tree, Random Forest, Logistic
+Regression, K Nearest Neighbour, Support Vector Machines</li>
+<li>Unsupervised learning: Principal Component Analysis</li>
+<li>Use of Cross-Validation to evaluate the accuracy of each model</li>
 </ul></li>
-<li>The prediction model created by ourselves</li>
+<li>Ensemble Vote model</li>
 </ul>
 <h2 id="group-members">Group Members</h2>
 <table>
@@ -196,4 +227,64 @@ Regression</li>
 </tr>
 </tbody>
 </table>
+<h2 id="reference">Reference</h2>
+<p>Various resources were used to help us gain a better understanding of
+the project and the various machine learning methods.</p>
+<ol type="1">
+<li><a
+href="https://www.kaggle.com/datasets/primaryobjects/voicegender">DataSet
+from Kaggle</a></li>
+<li><a
+href="https://www.rdocumentation.org/packages/warbleR/versions/1.1.2/topics/specan">R
+documentation (<code>specan</code>)</a>
+<ol type="1">
+<li>Helped us understand the meaning of the features.</li>
+<li>Helped us understand how to extract various features from audio
+signals.</li>
+</ol></li>
+<li><a href="https://www.statlearning.com/">An Introduction to
+Statistical Learning</a>
+<ol type="1">
+<li>Helped us gain a basic understanding of various supervised learning
+methods.</li>
+<li>Helped us understand Cross Validation.</li>
+</ol></li>
+<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The
+Elements of Statistical Learning</a>
+<ol type="1">
+<li>Helped us dive deeper into the theory behind support vector
+machines.</li>
+</ol></li>
+<li><a href="https://ntulearn.ntu.edu.sg/">Learning Materials from
+Nanyang Technological University</a>
+<ol type="1">
+<li>Helped us gain a basic understanding of machine learning.</li>
+<li>Lab classes guided us to start using Jupyter Notebook.</li>
+</ol></li>
+<li><a href="https://ds100.org/">UC Berkeley Data 100: Principles and
+Techniques of Data Science</a>
+<ol type="1">
+<li>Enabled us to make further progress in Python programming.</li>
+<li>Helped us gain a basic understanding of some machine learning
+algorithms.</li>
+</ol></li>
+<li><a href="https://chat.openai.com/">ChatGPT</a>
+<ol type="1">
+<li>Can patiently explain to me when I don’t understand a specific
+topic.</li>
+<li>Help me debug my code when it’s not working properly.</li>
+</ol></li>
+<li><a href="https://scikit-learn.org/stable/">scikit-learn
+documentation</a>
+<ol type="1">
+<li>Helped us understand the usage of various machine learning
+models.</li>
+</ol></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/">pandas
+documentation</a>
+<ol type="1">
+<li>Helped us understand the usage of various <code>pandas</code>
+functions.</li>
+</ol></li>
+</ol>
 </div>

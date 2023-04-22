@@ -1,5 +1,3 @@
-# Gender Recognition by Voice
-
 ![](./images/Cover/cover.svg)
 
 This is the project for NTU course *SC1015 Introduction to Data Science and Artificial Intelligence*.

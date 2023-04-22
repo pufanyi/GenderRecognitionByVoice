@@ -74,6 +74,26 @@ According to our data, the initial accuracy is approximately 0.98. When the feat
 
 We developed an Ensemble Vote model which integrated the outputs of multiple high-performing models and selected the majority vote to improve our prediction results. In our case, the accuracy of the Ensemble Vote model was not as ideal as we had hoped. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the importance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model's prediction.
 
+
+```python
+def predict(self, X):
+  rf_predictions = self.rfClassifier.predict(X)
+  svm_predictions = self.svmClassifier.predict(X)
+  mlp_predictions = self.mlpClassifier.predict(X)
+  predictions = []
+  for i in range(len(X)):
+    predictions.append(
+      np.argmax(
+        np.bincount([
+          rf_predictions[i],
+          svm_predictions[i],
+          mlp_predictions[i]
+        ])
+      )
+    )
+  return predictions
+```
+
 ## Conclusion
 
 What are the key features to achieve this?

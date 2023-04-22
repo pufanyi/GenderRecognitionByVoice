@@ -62,11 +62,9 @@ When dealing with datasets with a large number of predictors, it can be challeng
 
 Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we will utilize CV to evaluate the model's generalization performance and reduce overfitting.
 
-### Support Vector Machines
+### Support Vector Machines Exploration
 
-We still chose two previous variables. We used four types of models.The Gaussian kernel has the highest accuracy score of 0.968, followed by the Linear kernel with the accuracy score of 0.966. The other two, Polynomial kernel and Sigmoid kernel have the accuracy of 0.946 and 0.865.
-
-![](./images/SVMFurtherExplore/2DMixed.png)
+We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane for each kernel. This process allowed us to fine-tune the SVM algorithm and gain a better understanding of its behavior.
 
 ### Principal Component Analysis
 

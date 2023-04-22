@@ -66,9 +66,7 @@ We conducted an in-depth analysis of SVM by exploring and adjusting its paramete
 
 ### Principal Component Analysis
 
-PCA is a type of unsupervised learning algorithm that reduces the number of features while still retaining most of the original variance in the data.
-
-According to our data, the initial accuracy is approximately 0.98. When the features are reduced below 8, the accuracy rapidly declines to 0.88.
+We aimed to improve efficiency by compressing the predictor data using PCA. Through our exploration of compressing the data to varying dimensions and assessing the resulting accuracy, we gained a deeper understanding of the application of PCA. Our findings demonstrate that by compressing the data to a certain degree, we can achieve a good balance between accuracy and efficiency, leading to better performance in our predictive modeling.
 
 ### Ensemble Vote model
 

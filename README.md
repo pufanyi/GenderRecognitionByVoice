@@ -20,7 +20,7 @@ Please read through the code in the flowing sequence:
 
 ## Problem Definition
 
-- How can we differentiate the gender of a speaker through their voice?
+- How can we classify the gender of a speaker through their voice?
   - What are the key features to achieve this?
   - Which models can better predict the gender of a speaker?
 
@@ -76,20 +76,20 @@ We developed an Ensemble Vote model which integrated the outputs of multiple hig
 
 ## Conclusion
 
-What are the key features to achieve this?
+What are the key features to classify the gender of a speaker through their voice?
 
 > According to classification tree analysis, `IQR` and `meanfun` have been identified as the two main predictors for differentiating male and female voices. A higher IQR and lower meanfun are more indicative of a male speaker.
 
-Which models can better predict the gender of a speaker?
+Which models can predict the gender of a speaker with higher accuracy?
 
-> Among the various models, we found that the SVM model with an RBF kernel achieved the highest accuracy, with a score of 0.9834.
+> Among the various models, the SVM model with an RBF kernel achieved the highest accuracy, with a score of 0.9834.
 
 ## What We Learnt
 
 - Importance of data preparation
   - The initial lack of normalization has resulted in poor performance of the SVM model. Despite spending significant time adjusting the SVM parameters, the model still showed poor accuracy. However, after performing normalization, we observed a significant improvement in the accuracy of our SVM model.
-- The concepts and implementations of multiple models
-  - Supervised learning: SVM, KNN, Random Forest, Logistic Regression
+- Concepts and implementations of multiple models
+  - Supervised learning: Random Forest, Logistic Regression, SVM, KNN
   - Unsupervised learning: PCA
   - Using cross-validation to get the accuracy
 - Ensemble Vote model

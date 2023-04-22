@@ -34,7 +34,11 @@ The features `meanfreq` (mean frequency) and `centroid` (frequency centroid) wer
 
 To prepare the input data, we performed data correction by applying a log transformation. This helped to mitigate the impact of extreme values and normalize the distribution of the data. The log transformation effectively reduced skewness, brought the data closer to a normal distribution, and improved the accuracy of our model by mitigating the influence of outliers. Overall, this data correction technique proved to be an effective way to preprocess the input data and enhance the performance of our model.
 
+#### Data Before Log Transformation
+
 ![](./images/DataPreparation/LogTransform2.png)
+
+#### Data After Log Transformation
 
 ![](./images/DataPreparation/LogTransform3.png)
 

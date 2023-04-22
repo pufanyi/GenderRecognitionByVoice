@@ -72,7 +72,7 @@ Previously, we employed a conventional train-test split to evaluate the performa
 
 ### Support Vector Machines (SVM) Exploration
 
-We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane for each kernel. This process allowed us to fine-tune the SVM algorithm and gain a better understanding of its behavior.
+We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane for different parameter and kernel. This process allowed us to fine-tune the SVM algorithm and gain a better understanding of its behavior.
 
 ### Principal Component Analysis (PCA)
 

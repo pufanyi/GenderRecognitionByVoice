@@ -135,5 +135,9 @@ Various resources were used to help us gain a better understanding of the projec
    1. Helped us gain a basic understanding of machine learning.
    2. Lab classes guided us to start using Jupyter Notebook.
 6. [UC Berkeley Data 100: Principles and Techniques of Data Science](https://ds100.org/)
+   1. Enabled us to make further progress in Python programming.
+   2. Helped us gain a basic understanding of some machine learning algorithms.
+
+
 
 

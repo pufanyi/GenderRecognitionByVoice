@@ -121,3 +121,12 @@ Which models can predict the gender of a speaker with higher accuracy?
 ## Reference
 
 1. [DataSet from Kaggle](https://www.kaggle.com/datasets/primaryobjects/voicegender)
+2. [R documentation (`specan`)](https://www.rdocumentation.org/packages/warbleR/versions/1.1.2/topics/specan)
+   1. Helped us understand the meaning of the features
+   2. Helped us understand how to extract various features from audio signals.
+3. [An Introduction to Statistical Learning](https://www.statlearning.com/)
+   1. Help us gain a basic understanding of various supervised learning methods.
+   2. Help us understand Cross Validation.
+
+
+4. [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)

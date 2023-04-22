@@ -1,5 +1,7 @@
 # Gender Recognition by Voice
 
+![](./images/Cover/cover.svg)
+
 This is the project for NTU course *SC1015 Introduction to Data Science and Artificial Intelligence*.
 
 Our goal is to study the relationship between sound data and the gender of the speaker, and to attempt to estimate the gender of the speaker through various models.

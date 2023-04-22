@@ -28,7 +28,7 @@ Please read through the code in the flowing sequence:
 
 ### Remove Duplicate Data
 
-We removed the `meanfreq` (mean frequency) and `centroid` (frequency centroid). They are the same in definition.
+The features `meanfreq` (mean frequency) and `centroid` (frequency centroid) were found to be identical in definition, so we removed the duplicate data to avoid redundancy and potential confusion in the analysis.
 
 ### Log Transformation
 
@@ -38,7 +38,7 @@ To prepare the input data, we applied a log transformation, which helped to redu
 
 ### Data Normalization
 
-The purpose of normalization is to ensure that all features are treated equally in terms of their scale. After applying normalization, we saw a remarkable increase in accuracy of our SVM model from approximately 60% to nearly 99%.
+The purpose of normalization is to ensure that all features are treated equally in terms of their scale. After applying normalization, we saw a remarkable increase in accuracy of our SVM model from 0.6934 to 0.9834.
 
 ### Outlier Removal
 
@@ -58,7 +58,7 @@ When dealing with datasets with a large number of predictors, it can be challeng
 
 ### Cross Validation
 
-Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we will utilize CV to evaluate the model's generalization performance and reduce overfitting.
+Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we utilized CV to evaluate the model's generalization performance and reduce overfitting.
 
 ### Support Vector Machines Exploration
 

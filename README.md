@@ -56,19 +56,19 @@ When dealing with datasets with a large number of predictors, it can be challeng
 
 ## Highlights of Machine Learning
 
-### Cross Validation
+### Cross Validation (CV)
 
 Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we utilized CV to evaluate the model's generalization performance and reduce overfitting.
 
-### Support Vector Machines Exploration
+### Support Vector Machines (SVM) Exploration
 
 We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane for each kernel. This process allowed us to fine-tune the SVM algorithm and gain a better understanding of its behavior.
 
-### Principal Component Analysis
+### Principal Component Analysis (PCA)
 
 We aimed to improve efficiency by compressing the predictor data using PCA. Through our exploration of compressing the data to varying dimensions and assessing the resulting accuracy, we gained a deeper understanding of the application of PCA. Our findings demonstrate that by compressing the data to a certain degree, we can achieve a good balance between accuracy and efficiency, leading to better performance in our predictive modeling.
 
-### Ensemble Vote model
+### Ensemble Vote Model
 
 We developed an Ensemble Vote model which integrated the outputs of multiple high-performing models and selected the majority vote to improve our prediction results. In our case, the accuracy of the Ensemble Vote model was not as ideal as we had hoped. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the importance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model's prediction.
 

@@ -101,7 +101,7 @@ Which models can predict the gender of a speaker with higher accuracy?
 - Exploring Various Machine Learning Models for Accurate Predictions
   - Supervised learning: Classification Tree, Random Forest, Logistic Regression, K Nearest Neighbour, Support Vector Machines
   - Unsupervised learning: Principal Component Analysis
-  - Using cross-validation to evaluate the accuracy of each model
+  - Use of cross-validation to evaluate the accuracy of each model
 - Ensemble Vote model
 
 ## Group Members

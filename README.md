@@ -98,10 +98,10 @@ Which models can predict the gender of a speaker with higher accuracy?
 
 - Importance of data preparation
   - The initial lack of normalization has resulted in poor performance of the SVM model. Despite spending significant time adjusting the SVM parameters, the model still showed poor accuracy. However, after performing normalization, we observed a significant improvement in the accuracy of our SVM model.
-- Concepts and implementations of multiple models
-  - Supervised learning: Random Forest, Logistic Regression, SVM, KNN
-  - Unsupervised learning: PCA
-  - Using cross-validation to get the accuracy
+- Exploring Various Machine Learning Models for Accurate Predictions
+  - Supervised learning: Classification Tree, Random Forest, Logistic Regression, K Nearest Neighbour, Support Vector Machines
+  - Unsupervised learning: Principal Component Analysis
+  - Using cross-validation to evaluate the accuracy of each model
 - Ensemble Vote model
 
 ## Group Members

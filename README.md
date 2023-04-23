@@ -17,6 +17,7 @@ Please read through the code in the flowing sequence:
 - [`GenderRecognitionUsingNumericalAlgorithms.ipynb`](./src/GenderRecognitionUsingNumericalAlgorithms.ipynb)
 - [`SVMFurtherExploration.ipynb`](./src/SVMFurtherExploration.ipynb)
 - [`PCAFurtherExploration.ipynb`](./src/PCAFurtherExploration.ipynb)
+- [`EnsembleVoteModelExploration.ipynb`](./src/EnsembleVoteModelExploration.ipynb)
 
 #### Overview of our project
 

@@ -1,17 +1,14 @@
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-	<link rel="stylesheet" href="./css/style.css">
-</head>
 <p><a href="https://pufanyi.github.io/GenderRecognitionByVoice/"><img
 src="./images/Cover/cover.svg" /></a></p>
-<div class="card">
-<p>This is the project for NTU course <em>SC1015 Introduction to Data
-Science and Artificial Intelligence</em>.</p>
-<p>Our goal is to study the relationship between sound data and the
-gender of the speaker, and to attempt to estimate the gender of the
-speaker through various models.</p>
+<p>Welcome to our project for the NTU course <em>SC1015 Introduction to
+Data Science and Artificial Intelligence</em>!</p>
+<p>In this project, we explore the relationship between sound data and
+the gender of the speaker, and develop models to estimate the gender of
+a speaker based on various features.</p>
 <p>The main page of our project is <a
 href="https://pufanyi.github.io/GenderRecognitionByVoice">here</a>.</p>
+<p>And our presentation video is <a
+href="https://youtu.be/sWD81_SmO8E">here</a>.</p>
 <h2 id="content">Content</h2>
 <p>All code is located under the src directory.</p>
 <p>Please read through the code in the flowing sequence:</p>
@@ -26,11 +23,15 @@ href="./src/GenderRecognitionUsingNumericalAlgorithms.ipynb"><code>GenderRecogni
 href="./src/SVMFurtherExploration.ipynb"><code>SVMFurtherExploration.ipynb</code></a></li>
 <li><a
 href="./src/PCAFurtherExploration.ipynb"><code>PCAFurtherExploration.ipynb</code></a></li>
+<li><a
+href="./src/EnsembleVoteModelExploration.ipynb"><code>EnsembleVoteModelExploration.ipynb</code></a></li>
 </ul>
+<h4 id="overview-of-our-project">Overview of our project</h4>
+<p><img src="./images/Overview/FlowChart.svg" /></p>
 <h2 id="problem-formulation">Problem Formulation</h2>
 <p>How can we classify the gender of a speaker through their voice? -
-What are the key features to achieve this? - Which models can better
-predict the gender of a speaker?</p>
+What are the key features to classify the gender of a speaker? - Which
+models can predict the gender of a speaker with higher accuracy?</p>
 <h2 id="highlights-of-data-preparation">Highlights of Data
 preparation</h2>
 <h3 id="remove-duplicate-data">Remove Duplicate Data</h3>
@@ -49,10 +50,10 @@ be an effective way to preprocess the input data and enhance the
 performance of our model.</p>
 <h4 id="data-before-log-transformation">Data Before Log
 Transformation</h4>
-<p><img src="./images/DataPreparation/LogTransform2.png" /></p>
+<p><img src="./images/DataPreparation/LogTransform1.png" /></p>
 <h4 id="data-after-log-transformation">Data After Log
 Transformation</h4>
-<p><img src="./images/DataPreparation/LogTransform3.png" /></p>
+<p><img src="./images/DataPreparation/LogTransform2.png" /></p>
 <h3 id="data-normalization">Data Normalization</h3>
 <p>The purpose of normalization is to ensure that all features are
 treated equally in terms of their scale. After applying normalization,
@@ -137,8 +138,8 @@ balance between accuracy and efficiency, leading to better performance
 in our predictive modeling.</p>
 <h3 id="ensemble-vote-model">Ensemble Vote Model</h3>
 <p>We developed an Ensemble Vote model that integrated the outputs of
-multiple high-performing models, including Multi-Layer Perceptron (MLP),
-Random Forest (RF), and Support Vector Machine (SVM), and selected the
+multiple high-performing models, including Random Forest (RF), Support
+Vector Machine (SVM), Multi-Layer Perceptron (MLP),and selected the
 majority vote to improve our prediction results. However, the accuracy
 of the Ensemble Vote model did not meet our expectations. This
 experience taught us the importance of carefully selecting and combining
@@ -147,15 +148,6 @@ considering the underlying assumptions and limitations of each model. We
 also learned the significance of interpreting the results and
 understanding the reasoning behind the outputs, rather than blindly
 relying on a model’s prediction.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict(<span class="va">self</span>, X):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    rf_predictions <span class="op">=</span> <span class="va">self</span>.rfClassifier.predict(X)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    svm_predictions <span class="op">=</span> <span class="va">self</span>.svmClassifier.predict(X)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    mlp_predictions <span class="op">=</span> <span class="va">self</span>.mlpClassifier.predict(X)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    predictions <span class="op">=</span> []</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(X)):</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        predictions.append(np.argmax(np.bincount([rf_predictions[i], svm_predictions[i], mlp_predictions[i]])))</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> predictions</span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>What are the key features to classify the gender of a speaker through
 their voice?</p>
@@ -274,17 +266,17 @@ algorithms.</li>
 topic.</li>
 <li>Help me debug my code when it’s not working properly.</li>
 </ol></li>
-<li><a href="https://scikit-learn.org/stable/">scikit-learn
+<li><a href="https://scikit-learn.org/stable/"><code>scikit-learn</code>
 documentation</a>
 <ol type="1">
 <li>Helped us understand the usage of various machine learning
 models.</li>
 </ol></li>
-<li><a href="https://pandas.pydata.org/pandas-docs/stable/">pandas
+<li><a
+href="https://pandas.pydata.org/pandas-docs/stable/"><code>pandas</code>
 documentation</a>
 <ol type="1">
 <li>Helped us understand the usage of various <code>pandas</code>
 functions.</li>
 </ol></li>
 </ol>
-</div>

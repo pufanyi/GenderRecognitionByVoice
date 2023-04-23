@@ -28,6 +28,7 @@ Please read through the code in the flowing sequence:
 ## Problem Formulation
 
 How can we classify the gender of a speaker through their voice?
+
 - What are the key features to classify the gender of a speaker?
 - Which models can predict the gender of a speaker with higher accuracy?
 

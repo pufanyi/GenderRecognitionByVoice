@@ -4,6 +4,8 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background-color: #222;
+	color: #fff;
 }
 
 .image-container {
@@ -18,6 +20,8 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background-color: #222;
+	color: #fff;
 }
 
 /* Style the image */
@@ -27,7 +31,7 @@
 	object-fit: contain;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
 .img {
@@ -60,40 +64,44 @@ img {
 	object-fit: contain;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
 /* Style for link */
 a {
-	color: #007bff;
+	color: #4285F4;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 /* Style for link on hover */
 a:hover {
-	color: #0056b3;
+	color: #fff;
 	text-decoration: underline;
 }
 
 /* Style for link when active */
 a:active {
-	color: #007bff;
+	color: #4285F4;
 }
 
 /* Style for link when visited */
 a:visited {
-	color: #551a8b;
+	color: #8e55c4;
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 40px auto;
 	max-width: 800px;
-  background-image: url("../images/Cover/background.jpg");
+	background-color: #222;
+	color: #fff;
+	background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICAgIBwgIBwcHBwoHBwcHBw8ICQcKFREWFhURExMYHSggGBolGxMfITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NDysZFRkrNzctLSsrLTcrKystLTctKysrKysrKysrLSstKy0rKysrKysrKysrKysrKysrNysrK//AABEIALcBEwMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAAAQIDBQQH/8QAGBABAQEBAQAAAAAAAAAAAAAAAAEREgL/xAAZAQEBAQEBAQAAAAAAAAAAAAABAAIDBQT/xAAYEQEBAQEBAAAAAAAAAAAAAAAAEQESAv/aAAwDAQACEQMRAD8A/Fo3GI1Hpaxrca1iVdEc9xvV1jTRGY3prGrq5Ua01nTVyuWtXWNNXK5b01jTVDy3prGmqLlvTWdNEXDerrGmqDh0lalc5V0s75ddWVylalTG+XXTXPTTWeXXTXPTVRy6aaxq6qI3prOmmqNaIaRGhEQeTGpWYqelrWrrMGoI1prIYI1pqCii6usqIYumoKGNaagIYumoCGNaagIYurrIoNxvVlYVlz3y3q6wupz3G9XXPV0MbjerrGrKGY3q6xKukRvVlY1dTMb1WJV1rNEbGdUqPKisq1j0FEVvFBUCooCiiiKDBUE1FABiiAMURQYKgGdxTUGdY3GtXWRly3G9NZUMa1q6xqhmN6srEq6qI3q6xKuoRvV1z1daEdNGNCo+BQbr74AHNEBQ1QANUABSoiioVAdGqIo6VAB0ulAFZ30ArNY3QAVjdUAMLFZEGtNZEo1prGmpqN9HTn0nRrWeXXocehU8IA2+kANAAqgBVAAo0AFZFQFFVUBWaoAo6UBVmqAKzQAhQEgESgCJqDNWs1NZhWbVrNDphqAmnQFdWkUEKAJVBcEqgqBmgDIAAzoqA1nVVldZZVdZ0SaEGlGhAqKATAEMUAQGDNarKbzErNarIaxBQNOkBY6rRRQxuphjRiZrODWGAdMo3iYF0wNYliVZACBDQg1NAI0MqlGhBoxoRThiiK1DABQxAEolSqg0xKzWqzWSAAukWJGo6j0sWEWMuPrTDFVMVMMaAzWcTGkSrNjNbrNBrFStVlNZrNFrKaAQFVZVFVZU4Y0rKxvGsxoRWo1FQDDAEEUEVKzojKVpKzqQQZDrGokajqPSxqJGoy4ehRYHPdRRUyyjSJM1mtVmprGazWqzQ3jNZrVZqbxEBNAioqsRYcaxqKkWN41iqDbQKiIiogJVRnQiLUY1Mioyy7yNSLi46Ofr0RYSNBx3RUUOeiKgCItSprErNWs1NYlZq1mpvMSs1alDeJUVKmkWCokWI1GsOLFiRp0xrBUVpoAKEAARUrO4kRUY3AgAgfdycu3DN8um4+Ptzwx05TGYzvpnBrEoZZStVmo4zUq1KG8ZrNarNDeYlZrVSpvMYqNImmRRNIKGEVFazEqorpmFVZGoa0ghgqoAioioIqIozuBAFynt3wxfANa8jPWs3yzYDLpms2M0GW8ZrNBlvErNBN4zUAN4ygJvEQE0lARAGiAN4lAbwCg0gAoACQBRACiAFE//2Q==");
+	/* background-image: url("https://st2.depositphotos.com/40002702/50732/v/600/depositphotos_507322812-stock-illustration-dark-silver-gray-vector-blurred.jpg"); */
+	/* background-image: url("../images/Cover/background.jpg"); */
     background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+    background-size: cover;
+    background-position: center center;
 }
 
 h1 {
@@ -130,7 +138,7 @@ ul li a {
 }
 
 ul li a:hover {
-	color: #3367D6;
+	color: #fff;
 }
 
 table {
@@ -147,8 +155,9 @@ td {
 }
 
 th {
-	background-color: #f2f2f2;
+	background-color: #444;
 	font-weight: 500;
+	color: #fff;
 }
 
 .todo-list {
@@ -163,16 +172,16 @@ th {
 .card {
 	margin: 0 auto;
 	padding: 20px;
-	border: 1px solid #ccc;
+	border: 1px solid #333333;
 	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 	transition: box-shadow 0.3s ease;
-  background-color: white;
-/*  opacity: 0.98;*/
+	background-color: #1c1c1c;
+	color: #f2f2f2;
 }
 
 .card:hover {
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .body-container {

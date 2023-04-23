@@ -6,6 +6,8 @@ In this project, we explore the relationship between sound data and the gender o
 
 The main page of our project is [here](https://pufanyi.github.io/GenderRecognitionByVoice).
 
+And our presentation video is [here](https://youtu.be/sWD81_SmO8E).
+
 ## Content
 
 All code is located under the src directory.

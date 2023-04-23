@@ -20,7 +20,7 @@ Please read through the code in the flowing sequence:
 
 #### Overview of our project
 
-![](./images/DataPreparation/LogTransform1.png)
+![](./images/Overview/FlowChart.svg)
 
 ## Problem Formulation
 

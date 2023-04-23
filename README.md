@@ -113,8 +113,8 @@ Which models can predict the gender of a speaker with higher accuracy?
 
 | Name | GitHub Account | Email | Contribution |
 | --- | --- | --- | --- |
-| Pu Fanyi | [pufanyi](https://github.com/pufanyi) | [FPU001@e.ntu.edu.sg](mailto:FPU001@e.ntu.edu.sg) | Further Exploration |
-| Jiang Jinyi | [Jinyi087](https://github.com/Jinyi087) | [D220006@e.ntu.edu.sg](mailto:D220006@e.ntu.edu.sg) | Machine Learning |
+| Pu Fanyi | [pufanyi](https://github.com/pufanyi) | [FPU001@e.ntu.edu.sg](mailto:FPU001@e.ntu.edu.sg) | Machine Learning |
+| Jiang Jinyi | [Jinyi087](https://github.com/Jinyi087) | [D220006@e.ntu.edu.sg](mailto:D220006@e.ntu.edu.sg) | Further Exploration |
 | Shan Yi | [shanyi26](https://github.com/shanyi26) | [SH0005YI@e.ntu.edu.sg](mailto:SH0005@e.ntu.edu.sg) | Data Preparation and Exploration |
 
 ## Reference

@@ -18,6 +18,10 @@ Please read through the code in the flowing sequence:
 - [`SVMFurtherExploration.ipynb`](./src/SVMFurtherExploration.ipynb)
 - [`PCAFurtherExploration.ipynb`](./src/PCAFurtherExploration.ipynb)
 
+#### Overview of our project
+
+![](./images/DataPreparation/LogTransform1.png)
+
 ## Problem Formulation
 
 How can we classify the gender of a speaker through their voice?
@@ -36,11 +40,11 @@ To prepare the input data, we performed data correction by applying a log transf
 
 #### Data Before Log Transformation
 
-![](./images/DataPreparation/LogTransform2.png)
+![](./images/DataPreparation/LogTransform1.png)
 
 #### Data After Log Transformation
 
-![](./images/DataPreparation/LogTransform3.png)
+![](./images/DataPreparation/LogTransform2.png)
 
 ### Data Normalization
 

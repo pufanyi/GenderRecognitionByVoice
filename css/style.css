@@ -57,6 +57,10 @@
 	margin-bottom: 20px;
 }
 
+ul {
+  list-style-type: disc;
+}
+
 /* Style for image */
 img {
 	max-width: 100%;
@@ -121,7 +125,6 @@ p {
 }
 
 ul {
-	list-style-type: none;
 	padding-left: 20px;
 	margin: 0;
 	margin-bottom: 20px;

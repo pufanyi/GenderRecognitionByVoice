@@ -1,272 +1,343 @@
 <html>
 
-  <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Gender Recognition by Voice</title></head>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Gender Recognition by Voice</title>
+</head>
 
-  <body>
-    <p>
-      <a href="https://pufanyi.github.io/GenderRecognitionByVoice/">
-        <img src="./images/Cover/cover.svg" /></a>
+<body>
+  <p>
+    <a href="https://pufanyi.github.io/GenderRecognitionByVoice/">
+      <img src="./images/Cover/cover.svg" /></a>
+  </p>
+  <div class="card">
+    <p>Welcome to our project for the NTU course
+      <em>SC1015 Introduction to Data Science and Artificial Intelligence</em>!
     </p>
-    <div class="card">
-      <p>Welcome to our project for the NTU course
-        <em>SC1015 Introduction to Data Science and Artificial Intelligence</em>!</p>
-      <p>In this project, we explore the relationship between sound data and the gender of the speaker, and develop models to estimate the gender of a speaker based on various features.</p>
-      <h2 id="links">Links</h2>
-      <ul>
-        <li>
-          <a href="https://pufanyi.github.io/GenderRecognitionByVoice/">
-            Main Page
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/pufanyi/GenderRecognitionByVoice/">
-            GitHub Repository
-          </a>
-        </li>
-        <li>
-          <a href="https://youtu.be/sWD81_SmO8E">
-            Presentation Video
-          </a>
-        </li>
-      </ul>
-      <h2 id="presentation-video">Presentation Video</h2>
-        <center>
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/sWD81_SmO8E"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write;
+    <p>In this project, we explore the relationship between sound data and the gender of the speaker, and develop
+      models to estimate the gender of a speaker based on various features.</p>
+    <h2 id="links">Links</h2>
+    <ul>
+      <li>
+        <a href="https://pufanyi.github.io/GenderRecognitionByVoice/">
+          Main Page
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/pufanyi/GenderRecognitionByVoice/">
+          GitHub Repository
+        </a>
+      </li>
+      <li>
+        <a href="https://youtu.be/sWD81_SmO8E">
+          Presentation Video
+        </a>
+      </li>
+    </ul>
+    <h2 id="presentation-video">Presentation Video</h2>
+    <center>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/sWD81_SmO8E" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                        encrypted-media; gyroscope;
                        picture-in-picture;
-                       web-share"
-                allowfullscreen="">
-            </iframe>
-        </center>
-      <h2 id="content">Content</h2>
-      <p>All code is located under the src directory.</p>
-      <p>Please read through the code in the flowing sequence:</p>
-      <ul>
-        <li>
-          <a href="./src/DataPreparationAndExploration.ipynb">
-            <code>DataPreparationAndExploration.ipynb</code></a>
-        </li>
-        <li>
-          <a href="./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb">
-            <code>GenderRecognitionUsingTreeBasedAlgorithms.ipynb</code></a>
-        </li>
-        <li>
-          <a href="./src/GenderRecognitionUsingNumericalAlgorithms.ipynb">
-            <code>GenderRecognitionUsingNumericalAlgorithms.ipynb</code></a>
-        </li>
-        <li>
-          <a href="./src/SVMFurtherExploration.ipynb">
-            <code>SVMFurtherExploration.ipynb</code></a>
-        </li>
-        <li>
-          <a href="./src/PCAFurtherExploration.ipynb">
-            <code>PCAFurtherExploration.ipynb</code></a>
-        </li>
-        <li>
-          <a href="./src/EnsembleVoteModelExploration.ipynb">
-            <code>EnsembleVoteModelExploration.ipynb</code></a>
-        </li>
-      </ul>
-      <h4 id="overview-of-our-project">Overview of our project</h4>
-      <p>
-        <img src="./images/Overview/FlowChart.svg" /></p>
-      <h2 id="problem-formulation">Problem Formulation</h2>
-      <p>How can we classify the gender of a speaker through their voice?</p>
-      <ul>
-        <li>What are the key features to classify the gender of a speaker?</li>
-        <li>Which models can predict the gender of a speaker with higher accuracy?</li></ul>
-      <h2 id="highlights-of-data-preparation">Highlights of Data preparation</h2>
-      <h3 id="remove-duplicate-data">Remove Duplicate Data</h3>
-      <p>The features
-        <code>meanfreq</code>(mean frequency) and
-        <code>centroid</code>(frequency centroid) were found to be identical in definition, so we removed the duplicate data to avoid redundancy and potential confusion in the analysis.</p>
-      <h3 id="data-correction">Data Correction</h3>
-      <p>To prepare the input data, we performed data correction by applying a log transformation. This helped to mitigate the impact of extreme values and normalize the distribution of the data. The log transformation effectively reduced skewness, brought the data closer to a normal distribution, and improved the accuracy of our model by mitigating the influence of outliers. Overall, this data correction technique proved to be an effective way to preprocess the input data and enhance the performance of our model.</p>
-      <h4 id="data-before-log-transformation">Data Before Log Transformation</h4>
-      <p>
-        <img src="./images/DataPreparation/BeforeLogDark.png" /></p>
-      <h4 id="data-after-log-transformation">Data After Log Transformation</h4>
-      <p>
-        <img src="./images/DataPreparation/AfterLogDark.png" /></p>
-      <h3 id="data-normalization">Data Normalization</h3>
-      <p>The purpose of normalization is to ensure that all features are treated equally in terms of their scale. After applying normalization, we saw a remarkable increase in accuracy of our SVM model from 0.6934 to 0.9834.</p>
-      <h3 id="outlier-removal">Outlier Removal</h3>
-      <p>When dealing with datasets with a large number of predictors, it can be challenging to perform outlier removal on each specific predictor. Therefore, we utilized the Isolation Forest algorithm to identify and remove outliers from the input data.</p>
-      <h2 id="models-used">Models Used</h2>
-      <table>
-        <thead>
-          <tr class="header">
-            <th>Model</th>
-            <th>Training Accuracy</th>
-            <th>Testing Accuracy</th></tr>
-        </thead>
-        <tbody>
-          <tr class="odd">
-            <td>Classification Tree</td>
-            <td>1.0000</td>
-            <td>0.9751</td></tr>
-          <tr class="even">
-            <td>Random Forest</td>
-            <td>1.0000</td>
-            <td>0.9801</td></tr>
-          <tr class="odd">
-            <td>Logistic Regression</td>
-            <td>0.9763</td>
-            <td>0.9734</td></tr>
-          <tr class="even">
-            <td>K-Nearest Neighbors</td>
-            <td>1.0000</td>
-            <td>0.9817</td></tr>
-          <tr class="odd">
-            <td>Support Vector Machine</td>
-            <td>0.9896</td>
-            <td>0.9834</td></tr>
-          <tr class="even">
-            <td>Multi-Layer Perceptron</td>
-            <td>1.0000</td>
-            <td>0.9734</td></tr>
-          <tr class="odd">
-            <td>Ensemble Vote</td>
-            <td>1.0000</td>
-            <td>0.9800</td></tr>
-        </tbody>
-      </table>
-      <p>
-        <img src="./images/MachineLearning/AllResultsDark.png" /></p>
-      <h2 id="highlights-of-machine-learning">Highlights of Machine Learning</h2>
-      <h3 id="cross-validation-cv">Cross Validation (CV)</h3>
-      <p>Previously, we employed a conventional train-test split to evaluate the performance of our gender classification model. In order to further improve the accuracy and efficiency of our algorithm, we utilized CV to evaluate the model’s generalization performance and reduce overfitting.</p>
-      <h3 id="support-vector-machines-svm-exploration">Support Vector Machines (SVM) Exploration</h3>
-      <p>We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane for different parameter and kernel. This process allowed us to fine-tune the SVM algorithm and gain a better understanding of its behavior.</p>
-      <h3 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
-      <p>We aimed to improve efficiency by compressing the predictor data using PCA. Through our exploration of compressing the data to varying dimensions and assessing the resulting accuracy, we gained a deeper understanding of the application of PCA. Our findings demonstrate that by compressing the data to a certain degree, we can achieve a good balance between accuracy and efficiency, leading to better performance in our predictive modeling.</p>
-      <h3 id="ensemble-vote-model">Ensemble Vote Model</h3>
-      <p>We developed an Ensemble Vote model that integrated the outputs of multiple high-performing models, including Random Forest (RF), Support Vector Machine (SVM), Multi-Layer Perceptron (MLP),and selected the majority vote to improve our prediction results. However, the accuracy of the Ensemble Vote model did not meet our expectations. This experience taught us the importance of carefully selecting and combining models based on their individual strengths and weaknesses, and considering the underlying assumptions and limitations of each model. We also learned the significance of interpreting the results and understanding the reasoning behind the outputs, rather than blindly relying on a model’s prediction.</p>
-      <h2 id="conclusion">Conclusion</h2>
-      <p>What are the key features to classify the gender of a speaker through their voice?</p>
-      <blockquote>
-        <p>According to classification tree analysis,
-          <code>IQR</code>and
-          <code>meanfun</code>have been identified as the two main predictors for differentiating male and female voices. A higher
-          <code>IQR</code>and lower
-          <code>meanfun</code>are more indicative of a male speaker.</p></blockquote>
-      <p>Which models can predict the gender of a speaker with higher accuracy?</p>
-      <blockquote>
-        <p>Among the various models, the SVM model with an RBF kernel achieved the highest accuracy, with a score of 0.9834.</p>
-      </blockquote>
-      <h2 id="what-we-learnt">What We Learnt</h2>
-      <ul>
-        <li>Importance of data preparation
-          <ul>
-            <li>The initial lack of normalization has resulted in poor performance of the SVM model. Despite spending significant time adjusting the SVM parameters, the model still showed poor accuracy. However, after performing normalization, we observed a significant improvement in the accuracy of our SVM model.</li></ul>
-        </li>
-        <li>Exploring Various Machine Learning Models for Accurate Predictions
-          <ul>
-            <li>Supervised learning: Classification Tree, Random Forest, Logistic Regression, K Nearest Neighbour, Support Vector Machines, Multi-Layer Perceptron</li>
-            <li>Unsupervised learning: Principal Component Analysis</li>
-            <li>Use of Cross-Validation to evaluate the accuracy of each model</li></ul>
-        </li>
-        <li>Ensemble Vote model</li></ul>
-      <h2 id="group-members">Group Members</h2>
-      <table>
-        <colgroup>
-          <col style="width: 25%" />
-          <col style="width: 25%" />
-          <col style="width: 25%" />
-          <col style="width: 25%" /></colgroup>
-        <thead>
-          <tr class="header">
-            <th>Name</th>
-            <th>GitHub Account</th>
-            <th>Email</th>
-            <th>Contribution</th></tr>
-        </thead>
-        <tbody>
-          <tr class="odd">
-            <td>Pu Fanyi</td>
-            <td>
-              <a href="https://github.com/pufanyi">pufanyi</a></td>
-            <td>
-              <a href="mailto:FPU001@e.ntu.edu.sg">FPU001@e.ntu.edu.sg</a></td>
-            <td>Further Exploration, presentation</td></tr>
-          <tr class="even">
-            <td>Jiang Jinyi</td>
-            <td>
-              <a href="https://github.com/Jinyi087">Jinyi087</a></td>
-            <td>
-              <a href="mailto:D220006@e.ntu.edu.sg">D220006@e.ntu.edu.sg</a></td>
-            <td>Machine Learning, slides &amp; script</td></tr>
-          <tr class="odd">
-            <td>Shan Yi</td>
-            <td>
-              <a href="https://github.com/shanyi26">shanyi26</a></td>
-            <td>
-              <a href="mailto:SH0005@e.ntu.edu.sg">SH0005YI@e.ntu.edu.sg</a></td>
-            <td>Data Preparation and Exploration, slides &amp; script</td></tr>
-        </tbody>
-      </table>
-      <h2 id="reference">Reference</h2>
-      <p>Various resources were used to help us gain a better understanding of the project and the various machine learning methods.</p>
-      <ol type="1">
-        <li>
-          <a href="https://www.kaggle.com/datasets/primaryobjects/voicegender">DataSet from Kaggle</a></li>
-        <li>
-          <a href="https://www.rdocumentation.org/packages/warbleR/versions/1.1.2/topics/specan">R documentation (
-            <code>specan</code>)</a>
-          <ol type="1">
-            <li>Helped us understand the meaning of the features.</li>
-            <li>Helped us understand how to extract various features from audio signals.</li></ol>
-        </li>
-        <li>
-          <a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a>
-          <ol type="1">
-            <li>Helped us gain a basic understanding of various supervised learning methods.</li>
-            <li>Helped us understand Cross Validation.</li></ol>
-        </li>
-        <li>
-          <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a>
-          <ol type="1">
-            <li>Helped us dive deeper into the theory behind support vector machines.</li></ol>
-        </li>
-        <li>
-          <a href="https://ntulearn.ntu.edu.sg/">Learning Materials from Nanyang Technological University</a>
-          <ol type="1">
-            <li>Helped us gain a basic understanding of machine learning.</li>
-            <li>Lab classes guided us to start using Jupyter Notebook.</li></ol>
-        </li>
-        <li>
-          <a href="https://ds100.org/">UC Berkeley Data 100: Principles and Techniques of Data Science</a>
-          <ol type="1">
-            <li>Enabled us to make further progress in Python programming.</li>
-            <li>Helped us gain a basic understanding of some machine learning algorithms.</li></ol>
-        </li>
-        <li>
-          <a href="https://chat.openai.com/">ChatGPT</a>
-          <ol type="1">
-            <li>Can patiently explain to me when I don’t understand a specific topic.</li>
-            <li>Help me debug my code when it’s not working properly.</li></ol>
-        </li>
-        <li>
-          <a href="https://scikit-learn.org/stable/">
-            <code>scikit-learn</code>documentation</a>
-          <ol type="1">
-            <li>Helped us understand the usage of various machine learning models.</li></ol>
-        </li>
-        <li>
-          <a href="https://pandas.pydata.org/pandas-docs/stable/">
-            <code>pandas</code>documentation</a>
-          <ol type="1">
-            <li>Helped us understand the usage of various
-              <code>pandas</code>functions.</li></ol>
-        </li>
-      </ol>
-    </div>
-  </body>
+                       web-share" allowfullscreen="">
+      </iframe>
+    </center>
+    <h2 id="content">Content</h2>
+    <p>All code is located under the src directory.</p>
+    <p>Please read through the code in the flowing sequence:</p>
+    <ul>
+      <li>
+        <a href="./src/DataPreparationAndExploration.ipynb">
+          <code>DataPreparationAndExploration.ipynb</code></a>
+      </li>
+      <li>
+        <a href="./src/GenderRecognitionUsingTreeBasedAlgorithms.ipynb">
+          <code>GenderRecognitionUsingTreeBasedAlgorithms.ipynb</code></a>
+      </li>
+      <li>
+        <a href="./src/GenderRecognitionUsingNumericalAlgorithms.ipynb">
+          <code>GenderRecognitionUsingNumericalAlgorithms.ipynb</code></a>
+      </li>
+      <li>
+        <a href="./src/SVMFurtherExploration.ipynb">
+          <code>SVMFurtherExploration.ipynb</code></a>
+      </li>
+      <li>
+        <a href="./src/PCAFurtherExploration.ipynb">
+          <code>PCAFurtherExploration.ipynb</code></a>
+      </li>
+      <li>
+        <a href="./src/EnsembleVoteModelExploration.ipynb">
+          <code>EnsembleVoteModelExploration.ipynb</code></a>
+      </li>
+    </ul>
+    <h4 id="overview-of-our-project">Overview of our project</h4>
+    <p>
+      <img src="./images/Overview/FlowChart.svg" class="flow-chart" />
+    </p>
+    <h2 id="problem-formulation">Problem Formulation</h2>
+    <p>How can we classify the gender of a speaker through their voice?</p>
+    <ul>
+      <li>What are the key features to classify the gender of a speaker?</li>
+      <li>Which models can predict the gender of a speaker with higher accuracy?</li>
+    </ul>
+    <h2 id="highlights-of-data-preparation">Highlights of Data preparation</h2>
+    <h3 id="remove-duplicate-data">Remove Duplicate Data</h3>
+    <p>The features
+      <code>meanfreq</code>(mean frequency) and
+      <code>centroid</code>(frequency centroid) were found to be identical in definition, so we removed the
+      duplicate data to avoid redundancy and potential confusion in the analysis.
+    </p>
+    <h3 id="data-correction">Data Correction</h3>
+    <p>To prepare the input data, we performed data correction by applying a log transformation. This helped to
+      mitigate the impact of extreme values and normalize the distribution of the data. The log transformation
+      effectively reduced skewness, brought the data closer to a normal distribution, and improved the accuracy of
+      our model by mitigating the influence of outliers. Overall, this data correction technique proved to be an
+      effective way to preprocess the input data and enhance the performance of our model.</p>
+    <h4 id="data-before-log-transformation">Data Before Log Transformation</h4>
+    <p>
+      <img src="./images/DataPreparation/BeforeLogDark.png" />
+    </p>
+    <h4 id="data-after-log-transformation">Data After Log Transformation</h4>
+    <p>
+      <img src="./images/DataPreparation/AfterLogDark.png" />
+    </p>
+    <h3 id="data-normalization">Data Normalization</h3>
+    <p>The purpose of normalization is to ensure that all features are treated equally in terms of their scale.
+      After applying normalization, we saw a remarkable increase in accuracy of our SVM model from 0.6934 to
+      0.9834.</p>
+    <h3 id="outlier-removal">Outlier Removal</h3>
+    <p>When dealing with datasets with a large number of predictors, it can be challenging to perform outlier
+      removal on each specific predictor. Therefore, we utilized the Isolation Forest algorithm to identify and
+      remove outliers from the input data.</p>
+    <h2 id="models-used">Models Used</h2>
+    <table>
+      <thead>
+        <tr class="header">
+          <th>Model</th>
+          <th>Training Accuracy</th>
+          <th>Testing Accuracy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Classification Tree</td>
+          <td>1.0000</td>
+          <td>0.9751</td>
+        </tr>
+        <tr class="even">
+          <td>Random Forest</td>
+          <td>1.0000</td>
+          <td>0.9801</td>
+        </tr>
+        <tr class="odd">
+          <td>Logistic Regression</td>
+          <td>0.9763</td>
+          <td>0.9734</td>
+        </tr>
+        <tr class="even">
+          <td>K-Nearest Neighbors</td>
+          <td>1.0000</td>
+          <td>0.9817</td>
+        </tr>
+        <tr class="odd">
+          <td>Support Vector Machine</td>
+          <td>0.9896</td>
+          <td>0.9834</td>
+        </tr>
+        <tr class="even">
+          <td>Multi-Layer Perceptron</td>
+          <td>1.0000</td>
+          <td>0.9734</td>
+        </tr>
+        <tr class="odd">
+          <td>Ensemble Vote</td>
+          <td>1.0000</td>
+          <td>0.9800</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <img src="./images/MachineLearning/AllResultsDark.png" />
+    </p>
+    <h2 id="highlights-of-machine-learning">Highlights of Machine Learning</h2>
+    <h3 id="cross-validation-cv">Cross Validation (CV)</h3>
+    <p>Previously, we employed a conventional train-test split to evaluate the performance of our gender
+      classification model. In order to further improve the accuracy and efficiency of our algorithm, we utilized
+      CV to evaluate the model’s generalization performance and reduce overfitting.</p>
+    <h3 id="support-vector-machines-svm-exploration">Support Vector Machines (SVM) Exploration</h3>
+    <p>We conducted an in-depth analysis of SVM by exploring and adjusting its parameters to achieve optimal
+      performance. To explicitly refine our understanding of each parameter, we plotted the separating hyperplane
+      for different parameter and kernel. This process allowed us to fine-tune the SVM algorithm and gain a better
+      understanding of its behavior.</p>
+    <h3 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
+    <p>We aimed to improve efficiency by compressing the predictor data using PCA. Through our exploration of
+      compressing the data to varying dimensions and assessing the resulting accuracy, we gained a deeper
+      understanding of the application of PCA. Our findings demonstrate that by compressing the data to a certain
+      degree, we can achieve a good balance between accuracy and efficiency, leading to better performance in our
+      predictive modeling.</p>
+    <h3 id="ensemble-vote-model">Ensemble Vote Model</h3>
+    <p>We developed an Ensemble Vote model that integrated the outputs of multiple high-performing models, including
+      Random Forest (RF), Support Vector Machine (SVM), Multi-Layer Perceptron (MLP),and selected the majority
+      vote to improve our prediction results. However, the accuracy of the Ensemble Vote model did not meet our
+      expectations. This experience taught us the importance of carefully selecting and combining models based on
+      their individual strengths and weaknesses, and considering the underlying assumptions and limitations of
+      each model. We also learned the significance of interpreting the results and understanding the reasoning
+      behind the outputs, rather than blindly relying on a model’s prediction.</p>
+    <h2 id="conclusion">Conclusion</h2>
+    <p>What are the key features to classify the gender of a speaker through their voice?</p>
+    <blockquote>
+      <p>According to classification tree analysis,
+        <code>IQR</code>and
+        <code>meanfun</code>have been identified as the two main predictors for differentiating male and female
+        voices. A higher
+        <code>IQR</code>and lower
+        <code>meanfun</code>are more indicative of a male speaker.
+      </p>
+    </blockquote>
+    <p>Which models can predict the gender of a speaker with higher accuracy?</p>
+    <blockquote>
+      <p>Among the various models, the SVM model with an RBF kernel achieved the highest accuracy, with a score of
+        0.9834.</p>
+    </blockquote>
+    <h2 id="what-we-learnt">What We Learnt</h2>
+    <ul>
+      <li>Importance of data preparation
+        <ul>
+          <li>The initial lack of normalization has resulted in poor performance of the SVM model. Despite
+            spending significant time adjusting the SVM parameters, the model still showed poor accuracy.
+            However, after performing normalization, we observed a significant improvement in the accuracy
+            of our SVM model.</li>
+        </ul>
+      </li>
+      <li>Exploring Various Machine Learning Models for Accurate Predictions
+        <ul>
+          <li>Supervised learning: Classification Tree, Random Forest, Logistic Regression, K Nearest
+            Neighbour, Support Vector Machines, Multi-Layer Perceptron</li>
+          <li>Unsupervised learning: Principal Component Analysis</li>
+          <li>Use of Cross-Validation to evaluate the accuracy of each model</li>
+        </ul>
+      </li>
+      <li>Ensemble Vote model</li>
+    </ul>
+    <h2 id="group-members">Group Members</h2>
+    <table>
+      <colgroup>
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Name</th>
+          <th>GitHub Account</th>
+          <th>Email</th>
+          <th>Contribution</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Pu Fanyi</td>
+          <td>
+            <a href="https://github.com/pufanyi">pufanyi</a>
+          </td>
+          <td>
+            <a href="mailto:FPU001@e.ntu.edu.sg">FPU001@e.ntu.edu.sg</a>
+          </td>
+          <td>Further Exploration, presentation</td>
+        </tr>
+        <tr class="even">
+          <td>Jiang Jinyi</td>
+          <td>
+            <a href="https://github.com/Jinyi087">Jinyi087</a>
+          </td>
+          <td>
+            <a href="mailto:D220006@e.ntu.edu.sg">D220006@e.ntu.edu.sg</a>
+          </td>
+          <td>Machine Learning, slides &amp; script</td>
+        </tr>
+        <tr class="odd">
+          <td>Shan Yi</td>
+          <td>
+            <a href="https://github.com/shanyi26">shanyi26</a>
+          </td>
+          <td>
+            <a href="mailto:SH0005@e.ntu.edu.sg">SH0005YI@e.ntu.edu.sg</a>
+          </td>
+          <td>Data Preparation and Exploration, slides &amp; script</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="reference">Reference</h2>
+    <p>Various resources were used to help us gain a better understanding of the project and the various machine
+      learning methods.</p>
+    <ol type="1">
+      <li>
+        <a href="https://www.kaggle.com/datasets/primaryobjects/voicegender">DataSet from Kaggle</a>
+      </li>
+      <li>
+        <a href="https://www.rdocumentation.org/packages/warbleR/versions/1.1.2/topics/specan">R documentation (
+          <code>specan</code>)</a>
+        <ol type="1">
+          <li>Helped us understand the meaning of the features.</li>
+          <li>Helped us understand how to extract various features from audio signals.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a>
+        <ol type="1">
+          <li>Helped us gain a basic understanding of various supervised learning methods.</li>
+          <li>Helped us understand Cross Validation.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a>
+        <ol type="1">
+          <li>Helped us dive deeper into the theory behind support vector machines.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://ntulearn.ntu.edu.sg/">Learning Materials from Nanyang Technological University</a>
+        <ol type="1">
+          <li>Helped us gain a basic understanding of machine learning.</li>
+          <li>Lab classes guided us to start using Jupyter Notebook.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://ds100.org/">UC Berkeley Data 100: Principles and Techniques of Data Science</a>
+        <ol type="1">
+          <li>Enabled us to make further progress in Python programming.</li>
+          <li>Helped us gain a basic understanding of some machine learning algorithms.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://chat.openai.com/">ChatGPT</a>
+        <ol type="1">
+          <li>Can patiently explain to me when I don’t understand a specific topic.</li>
+          <li>Help me debug my code when it’s not working properly.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://scikit-learn.org/stable/">
+          <code>scikit-learn</code>documentation</a>
+        <ol type="1">
+          <li>Helped us understand the usage of various machine learning models.</li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://pandas.pydata.org/pandas-docs/stable/">
+          <code>pandas</code>documentation</a>
+        <ol type="1">
+          <li>Helped us understand the usage of various
+            <code>pandas</code>functions.
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</body>
 
 </html>

@@ -15,7 +15,7 @@ def convert_notebooks(ipynb_code_folder, output_folder):
     ]
 
     # Convert each notebook to HTML
-    for f in tqdm.tqdm(ipynb_code_files):
+    for f in tqdm.tqdm(ipynb_code_files, desc="Converting notebooks to HTML", unit="file"):
         notebook_path = os.path.join(ipynb_code_folder, f)
         subprocess.run(
             [

@@ -14619,7 +14619,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/origin/voice.csv'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/origin/voice.csv"</span><span class="p">)</span>
 <span class="n">voice_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15105,8 +15105,8 @@ $$</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="p">(</span><span class="n">voice_data</span><span class="p">[</span><span class="s1">'meanfreq'</span><span class="p">]</span> <span class="o">==</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'centroid'</span><span class="p">])</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'centroid'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="p">(</span><span class="n">voice_data</span><span class="p">[</span><span class="s2">"meanfreq"</span><span class="p">]</span> <span class="o">==</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"centroid"</span><span class="p">])</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"centroid"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15133,7 +15133,7 @@ $$</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15213,7 +15213,7 @@ Name: label, dtype: int64</pre>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">voice_data</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">4</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">4</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15269,10 +15269,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">central_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'meanfreq'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'Q25'</span><span class="p">,</span> <span class="s1">'Q75'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">central_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"meanfreq"</span><span class="p">,</span> <span class="s2">"median"</span><span class="p">,</span> <span class="s2">"Q25"</span><span class="p">,</span> <span class="s2">"Q75"</span><span class="p">]</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">central_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15318,7 +15318,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">central_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15386,10 +15386,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spread_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'IQR'</span><span class="p">,</span> <span class="s1">'sd'</span><span class="p">,</span> <span class="s1">'skew'</span><span class="p">,</span> <span class="s1">'kurt'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spread_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"IQR"</span><span class="p">,</span> <span class="s2">"sd"</span><span class="p">,</span> <span class="s2">"skew"</span><span class="p">,</span> <span class="s2">"kurt"</span><span class="p">]</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">spread_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15435,7 +15435,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">spread_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15503,11 +15503,11 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log_skew</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'skew'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">log_kurt</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'kurt'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">voice_data</span><span class="p">[</span><span class="s1">'log_skew'</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_skew</span>
-<span class="n">voice_data</span><span class="p">[</span><span class="s1">'log_kurt'</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_kurt</span>
-<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'skew'</span><span class="p">,</span> <span class="s1">'kurt'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log_skew</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"skew"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">log_kurt</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"kurt"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">voice_data</span><span class="p">[</span><span class="s2">"log_skew"</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_skew</span>
+<span class="n">voice_data</span><span class="p">[</span><span class="s2">"log_kurt"</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_kurt</span>
+<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"skew"</span><span class="p">,</span> <span class="s2">"kurt"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">voice_data</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
@@ -15553,8 +15553,8 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'log_skew'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'log_kurt'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"log_skew"</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"log_kurt"</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15613,8 +15613,8 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'log_skew'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'log_kurt'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"log_skew"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"log_kurt"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15696,10 +15696,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spectral_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sp.ent'</span><span class="p">,</span> <span class="s1">'sfm'</span><span class="p">,</span> <span class="s1">'mode'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spectral_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"sp.ent"</span><span class="p">,</span> <span class="s2">"sfm"</span><span class="p">,</span> <span class="s2">"mode"</span><span class="p">]</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">spectral_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15745,7 +15745,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">spectral_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15813,10 +15813,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fundamental_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'meanfun'</span><span class="p">,</span> <span class="s1">'minfun'</span><span class="p">,</span> <span class="s1">'maxfun'</span><span class="p">,</span> <span class="s1">'modindx'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fundamental_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"meanfun"</span><span class="p">,</span> <span class="s2">"minfun"</span><span class="p">,</span> <span class="s2">"maxfun"</span><span class="p">,</span> <span class="s2">"modindx"</span><span class="p">]</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fundamental_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15862,7 +15862,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fundamental_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15930,11 +15930,11 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log_minfun</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'minfun'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">exp_maxfun</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'maxfun'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span>
-<span class="n">voice_data</span><span class="p">[</span><span class="s1">'log_minfun'</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_minfun</span>
-<span class="n">voice_data</span><span class="p">[</span><span class="s1">'exp_maxfun'</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_maxfun</span>
-<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'minfun'</span><span class="p">,</span> <span class="s1">'maxfun'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">log_minfun</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"minfun"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">exp_maxfun</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"maxfun"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span>
+<span class="n">voice_data</span><span class="p">[</span><span class="s2">"log_minfun"</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_minfun</span>
+<span class="n">voice_data</span><span class="p">[</span><span class="s2">"exp_maxfun"</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_maxfun</span>
+<span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"minfun"</span><span class="p">,</span> <span class="s2">"maxfun"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15951,8 +15951,8 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'log_minfun'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'exp_maxfun'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"log_minfun"</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"exp_maxfun"</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16011,8 +16011,8 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'log_minfun'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'exp_maxfun'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"log_minfun"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"exp_maxfun"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -16094,10 +16094,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dominant_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'meandom'</span><span class="p">,</span> <span class="s1">'mindom'</span><span class="p">,</span> <span class="s1">'maxdom'</span><span class="p">,</span> <span class="s1">'dfrange'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dominant_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"meandom"</span><span class="p">,</span> <span class="s2">"mindom"</span><span class="p">,</span> <span class="s2">"maxdom"</span><span class="p">,</span> <span class="s2">"dfrange"</span><span class="p">]</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dominant_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16143,7 +16143,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dominant_cols</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s1">'h'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s2">"h"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16222,7 +16222,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">distribution_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'meanfreq'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'Q25'</span><span class="p">,</span> <span class="s1">'Q75'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">distribution_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"meanfreq"</span><span class="p">,</span> <span class="s2">"median"</span><span class="p">,</span> <span class="s2">"Q25"</span><span class="p">,</span> <span class="s2">"Q75"</span><span class="p">]</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="n">distribution_cols</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
@@ -16375,12 +16375,29 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span>
-    <span class="p">[</span><span class="s1">'meanfreq'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'Q25'</span><span class="p">,</span> <span class="s1">'Q75'</span><span class="p">,</span>
-     <span class="s1">'IQR'</span><span class="p">,</span> <span class="s1">'sd'</span><span class="p">,</span> <span class="s1">'log_skew'</span><span class="p">,</span> <span class="s1">'log_kurt'</span><span class="p">,</span>
-     <span class="s1">'sp.ent'</span><span class="p">,</span> <span class="s1">'sfm'</span><span class="p">,</span> <span class="s1">'mode'</span><span class="p">,</span>
-     <span class="s1">'meanfun'</span><span class="p">,</span> <span class="s1">'log_minfun'</span><span class="p">,</span> <span class="s1">'exp_maxfun'</span><span class="p">,</span> <span class="s1">'modindx'</span><span class="p">,</span>
-     <span class="s1">'meandom'</span><span class="p">,</span> <span class="s1">'mindom'</span><span class="p">,</span> <span class="s1">'maxdom'</span><span class="p">,</span> <span class="s1">'dfrange'</span><span class="p">,</span>
-     <span class="s1">'label'</span><span class="p">]]</span>
+    <span class="p">[</span>
+        <span class="s2">"meanfreq"</span><span class="p">,</span>
+        <span class="s2">"median"</span><span class="p">,</span>
+        <span class="s2">"Q25"</span><span class="p">,</span>
+        <span class="s2">"Q75"</span><span class="p">,</span>
+        <span class="s2">"IQR"</span><span class="p">,</span>
+        <span class="s2">"sd"</span><span class="p">,</span>
+        <span class="s2">"log_skew"</span><span class="p">,</span>
+        <span class="s2">"log_kurt"</span><span class="p">,</span>
+        <span class="s2">"sp.ent"</span><span class="p">,</span>
+        <span class="s2">"sfm"</span><span class="p">,</span>
+        <span class="s2">"mode"</span><span class="p">,</span>
+        <span class="s2">"meanfun"</span><span class="p">,</span>
+        <span class="s2">"log_minfun"</span><span class="p">,</span>
+        <span class="s2">"exp_maxfun"</span><span class="p">,</span>
+        <span class="s2">"modindx"</span><span class="p">,</span>
+        <span class="s2">"meandom"</span><span class="p">,</span>
+        <span class="s2">"mindom"</span><span class="p">,</span>
+        <span class="s2">"maxdom"</span><span class="p">,</span>
+        <span class="s2">"dfrange"</span><span class="p">,</span>
+        <span class="s2">"label"</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">]</span>
 <span class="n">voice_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -16595,11 +16612,27 @@ class="
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 
-<span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'meanfreq'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'Q25'</span><span class="p">,</span> <span class="s1">'Q75'</span><span class="p">,</span>
-       <span class="s1">'IQR'</span><span class="p">,</span> <span class="s1">'sd'</span><span class="p">,</span> <span class="s1">'log_skew'</span><span class="p">,</span> <span class="s1">'log_kurt'</span><span class="p">,</span>
-       <span class="s1">'sp.ent'</span><span class="p">,</span> <span class="s1">'sfm'</span><span class="p">,</span> <span class="s1">'mode'</span><span class="p">,</span>
-       <span class="s1">'meanfun'</span><span class="p">,</span> <span class="s1">'log_minfun'</span><span class="p">,</span> <span class="s1">'exp_maxfun'</span><span class="p">,</span> <span class="s1">'modindx'</span><span class="p">,</span>
-       <span class="s1">'meandom'</span><span class="p">,</span> <span class="s1">'mindom'</span><span class="p">,</span> <span class="s1">'maxdom'</span><span class="p">,</span> <span class="s1">'dfrange'</span><span class="p">]</span>
+<span class="n">val</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"meanfreq"</span><span class="p">,</span>
+    <span class="s2">"median"</span><span class="p">,</span>
+    <span class="s2">"Q25"</span><span class="p">,</span>
+    <span class="s2">"Q75"</span><span class="p">,</span>
+    <span class="s2">"IQR"</span><span class="p">,</span>
+    <span class="s2">"sd"</span><span class="p">,</span>
+    <span class="s2">"log_skew"</span><span class="p">,</span>
+    <span class="s2">"log_kurt"</span><span class="p">,</span>
+    <span class="s2">"sp.ent"</span><span class="p">,</span>
+    <span class="s2">"sfm"</span><span class="p">,</span>
+    <span class="s2">"mode"</span><span class="p">,</span>
+    <span class="s2">"meanfun"</span><span class="p">,</span>
+    <span class="s2">"log_minfun"</span><span class="p">,</span>
+    <span class="s2">"exp_maxfun"</span><span class="p">,</span>
+    <span class="s2">"modindx"</span><span class="p">,</span>
+    <span class="s2">"meandom"</span><span class="p">,</span>
+    <span class="s2">"mindom"</span><span class="p">,</span>
+    <span class="s2">"maxdom"</span><span class="p">,</span>
+    <span class="s2">"dfrange"</span><span class="p">,</span>
+<span class="p">]</span>
 <span class="n">voice_data</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">voice_data</span><span class="p">[</span><span class="n">val</span><span class="p">])</span>
 </pre></div>
 
@@ -16630,7 +16663,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">voice_data</span><span class="p">):</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">4</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">voice_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">4</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16686,7 +16719,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/voice_data.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">voice_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/voice_data.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16716,8 +16749,8 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">IsolationForest</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">voice_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">voice_data</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
@@ -16841,7 +16874,9 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16880,13 +16915,13 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/X_train.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">X_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/X_test.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">y_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/y_train.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">y_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/y_test.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/X_train.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">X_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/X_test.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">y_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/y_train.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">y_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/y_test.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="n">X</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/X.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">y</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/cleaned/y.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/X.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">y</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/cleaned/y.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16902,10 +16937,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'X_train shape: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'X_test shape: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'y_train shape: </span><span class="si">{</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'y_test shape: </span><span class="si">{</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"X_train shape: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"X_test shape: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y_train shape: </span><span class="si">{</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y_test shape: </span><span class="si">{</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
      </div>
